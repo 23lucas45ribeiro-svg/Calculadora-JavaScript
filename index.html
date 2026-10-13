@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="calculadora">
+        
+        <input id="input" type="text" inputmode="decimal">
+
+        <!-- Operadores Aritméticos -->
+
+        <button class="operadores" onclick="adicionarCaractere('+')">+</button>
+        <button class="operadores" onclick="adicionarCaractere('-')">-</button>
+        <button class="operadores" onclick="adicionarCaractere('*')">*</button>
+        <button class="operadores" onclick="adicionarCaractere('/')">/</button>
+
+        <!-- Números de 1 a 9 -->
+
+        <button class="numeros" onclick="adicionarCaractere('1')">1</button>
+        <button class="numeros" onclick="adicionarCaractere('2')">2</button>
+        <button class="numeros" onclick="adicionarCaractere('3')">3</button>
+        <button class="numeros" onclick="adicionarCaractere('4')">4</button>
+        <button class="numeros" onclick="adicionarCaractere('5')">5</button>
+        <button class="numeros" onclick="adicionarCaractere('6')">6</button>
+        <button class="numeros" onclick="adicionarCaractere('7')">7</button>
+        <button class="numeros" onclick="adicionarCaractere('8')">8</button>
+        <button class="numeros" onclick="adicionarCaractere('9')">9</button>
+
+        <!-- Botão de resultado -->
+
+        <button class="resultado" onclick="calcular()">=</button>
+
+        
+        <!-- Roda pé da página com 0 C e . -->
+
+        <button class="limpar" onclick="limparTela()">C</button>
+        <button class="numeros-0" onclick="adicionarCaractere('0')">0</button>
+        <button class="ponto" onclick="adicionarCaractere('.')">.</button>
+
+    </div>
+    
+<script src="script.js"></script>   
+</body>
+</html>

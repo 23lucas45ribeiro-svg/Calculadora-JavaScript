@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tamanho-padrao: 1.75rem;
+
+    --cor-de-fundo: linear-gradient(45deg, rgb(113, 53, 122),rgb(73, 56, 126));
+
+    --cor-operadores:rgb(81, 81, 171);
+
+    --hover-operadores: rgb(109, 109, 192);
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--cor-de-fundo);
+
+}
+.calculadora {
+    display: grid;
+    padding: 7px;
+    height: 500px;
+    width: 600px;
+    border: 2px solid rgb(0, 0, 0);
+    background: linear-gradient(rgb(17, 13, 13), black);
+    border-radius: 8px;
+    /* column-gap: 10px;
+    row-gap: 8px; */
+    gap: 5px;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7,1fr);
+}
+
+
+input {
+    outline: none;
+    font-size: 25px;
+    text-align: right;
+    grid-row: 1/2;
+    grid-column: 1/5;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    font-size: var(--tamanho-padrao);
+}
+
+.operadores {
+    background-color: rgb(81, 81, 171);
+}
+
+.resultado {
+    grid-column: 4/5;
+    grid-row: 3/7;
+    background-color: rgb(81, 81, 171); 
+}
+
+.limpar {
+    background-color: rgb(81, 81, 171);
+}
+
+.ponto {
+    background-color: rgb(81, 81, 171);
+}
+
+.ponto:hover, .limpar:hover, .resultado:hover,.operadores:hover {
+    background-color: var(--hover-operadores);
+}
